@@ -1,6 +1,6 @@
 "use client";
 
-import Button from "@/components/ui/Button";
+import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 import { Color, Size } from "@/types";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -41,7 +41,7 @@ const Filter: React.FC<FilterProps> = ({ valueKey, data, name }) => {
   };
   return (
     <div className="mb-8">
-      <h2 className="mb-4 font-bold text-xl">{name}</h2>
+      <h2 className="mb-4 font-bold text-xl dark:text-white">{name}</h2>
       <hr className="my-4" />
       <div className="flex flex-wrap gap-2">
         {data.map((item) => (

@@ -32,7 +32,7 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
         </div>
         <div className="relative sm:gap-x-6 sm:grid sm:grid-cols-2 pr-9 sm:pr-0">
           <div className="flex justify-between">
-            <p className="font-semibold text-black text-lg underline">
+            <p className="font-semibold text-black text-lg dark:text-zinc-300 underline">
               {data.name}
             </p>
           </div>

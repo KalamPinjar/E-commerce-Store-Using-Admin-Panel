@@ -33,7 +33,7 @@ const Modal: React.FC<ModalProps> = ({ open, onClose, children }) => {
               leaveTo="opacity-0 scale-95"
             >
               <DialogPanel className="rounded-lg w-full max-w-3xl text-left overflow-hidden align-middle">
-                <div className="relative flex items-center bg-white shadow-2xl px-4 sm:px-6 md:p-6 lg:p-8 pt-14 sm:pt-8 pb-8 w-full overflow-hidden">
+                <div className="relative flex items-center bg-white dark:dark:bg-slate-900 shadow-2xl px-4 sm:px-6 md:p-6 lg:p-8 pt-14 sm:pt-8 pb-8 w-full overflow-hidden">
                   <div className="top-4 right-4 absolute">
                     <IconButton onClick={onClose} icon={<X size={15} />} />
                   </div>

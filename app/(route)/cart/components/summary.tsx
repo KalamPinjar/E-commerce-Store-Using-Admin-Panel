@@ -1,6 +1,6 @@
 "use client";
 
-import Button from "@/components/ui/Button";
+import { Button } from "@/components/ui/Button";
 import Currency from "@/components/ui/currency";
 import useCart from "@/hooks/use-cart";
 import axios from "axios";
@@ -52,7 +52,11 @@ const Summary = () => {
           <Currency value={totalPrice} />
         </div>
       </div>
-      <Button onClick={onCheckout} className="mt-6 w-full">
+      <Button
+        disabled={items.length === 0}
+        onClick={onCheckout}
+        className="dark:bg-slate-900 mt-6 w-full dark:text-white"
+      >
         Checkout
       </Button>
     </div>

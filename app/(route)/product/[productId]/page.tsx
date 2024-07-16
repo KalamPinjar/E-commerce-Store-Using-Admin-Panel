@@ -51,7 +51,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ params }) => {
   );
 
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-slate-950 dark:text-white">
       <Container>
         <div className="px-4 sm:px-6 lg:px-8 py-10">
           <div className="lg:items-start lg:gap-x-8 lg:grid lg:grid-cols-2">

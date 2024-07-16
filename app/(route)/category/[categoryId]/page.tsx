@@ -72,14 +72,14 @@ const Category: React.FC<CategoryProps> = ({ params, searchParams }) => {
 
   if (!products || !sizes || !colors || !category) {
     return (
-      <div className="flex flex-col justify-center items-center h-full">
+      <div className="flex flex-col justify-center items-center h-screen">
         <Loader2 className="w-8 h-8 animate-spin" />
       </div>
     );
   }
 
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-slate-950">
       <Container>
         <Billboard data={category.billboard} />
         <div className="px-4 sm:px-6 lg:px-8 pb-24">

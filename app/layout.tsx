@@ -5,10 +5,7 @@ import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import ModalProvider from "@/providers/modal-providers";
 import ToastProvider from "@/providers/toast-providers";
-
-// const Navbar = dynamic(() => import('@/components/navbar'), {
-//   ssr: false, // This line is important if you don't want server-side rendering for this component
-// });
+import { ThemeProvider } from "@/providers/theme-providers";
 
 const font = Urbanist({ subsets: ["latin"] });
 
@@ -23,13 +20,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={font.className}>
-        <ModalProvider />
-        <ToastProvider />
-        <Navbar />
-        {children}
-        <Footer />
+    <html data-theme="" lang="en">
+      <body className={`${font.className} dark:text-zinc-800`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ModalProvider />
+          <ToastProvider />
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

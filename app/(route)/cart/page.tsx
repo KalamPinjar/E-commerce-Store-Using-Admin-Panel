@@ -18,10 +18,10 @@ const CartPage = () => {
     return null;
   }
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-slate-950">
       <Container>
         <div className="px-4 sm:px-6 lg:px-8 py-16">
-          <h1 className="font-bold text-3xl text-black">Shopping Cart</h1>
+          <h1 className="font-bold text-3xl text-black dark:text-white">Shopping Cart</h1>
           <div className="lg:items-start gap-x-12 lg:grid lg:grid-cols-12 mt-12">
             <div className="lg:col-span-7">
               {cart.items.length === 0 && (

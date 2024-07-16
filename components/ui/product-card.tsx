@@ -42,7 +42,7 @@ const ProductsCard: React.FC<ProductCardProps> = ({ data }) => {
         <Image
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="rounded-md aspect-square object-cover"
+          className="border-[1px] rounded-md aspect-square object-cover"
           //   src={data?.images.map((image) => image.url)[0]}
           src={data?.images?.[0]?.url}
           alt={data?.name}
@@ -61,8 +61,10 @@ const ProductsCard: React.FC<ProductCardProps> = ({ data }) => {
         </div>
       </div>
       <div>
-        <p>{data.name}</p>
-        <p className="text-gray-500 text-sm">{data.category?.name}</p>
+        <p className="dark:text-zinc-800">{data.name}</p>
+        <p className="text-gray-500 text-sm dark:text-zinc-800">
+          {data.category?.name}
+        </p>
       </div>
       <div className="flex justify-between items-center">
         <Currency value={data.price} />
