@@ -4,6 +4,7 @@ import Container from "@/components/ui/container";
 import useCart from "@/hooks/use-cart";
 import { useEffect, useState } from "react";
 import CartItem from "./components/cart-items";
+import Summary from "./components/summary";
 
 const CartPage = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -23,10 +24,16 @@ const CartPage = () => {
           <h1 className="font-bold text-3xl text-black">Shopping Cart</h1>
           <div className="lg:items-start gap-x-12 lg:grid lg:grid-cols-12 mt-12">
             <div className="lg:col-span-7">
-              {cart.items.map((item) => (
-                <CartItem key={item.id} data={item} />
-              ))}
+              {cart.items.length === 0 && (
+                <p className="text-neutral-500">No items in cart</p>
+              )}
+              <ul>
+                {cart.items.map((item) => (
+                  <CartItem key={item.id} data={item} />
+                ))}
+              </ul>
             </div>
+            <Summary />
           </div>
         </div>
       </Container>
